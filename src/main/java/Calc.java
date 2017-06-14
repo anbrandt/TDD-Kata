@@ -15,7 +15,7 @@ public class Calc {
 			tempIntFromString = Integer.valueOf(splitedString[0]);
 			return tempIntFromString;
 		} else {
-			//clean numbers string is a temporary string that holds a string without \n 
+			//clean numbers string is a temporary string that holds a string without \n
 			String cleanNumbers = numbers.replace("\n", ",");
 			splitedString = cleanNumbers.split(",");
 			for (String number : splitedString) {
