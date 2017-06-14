@@ -15,9 +15,10 @@ public class Calc {
 			tempIntFromString = Integer.valueOf(splitedString[0]);
 			return tempIntFromString;
 		} else {
+			//clean numbers string is a temporary string that holds a string without \n 
 			String cleanNumbers = numbers.replace("\n", ",");
-			String[] splitedString2 = cleanNumbers.split(",");
-			for (String number : splitedString2) {
+			splitedString = cleanNumbers.split(",");
+			for (String number : splitedString) {
 				int intNumber;
 				intNumber = Integer.valueOf(number);
 				result += intNumber;
