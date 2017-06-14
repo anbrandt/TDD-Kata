@@ -8,6 +8,7 @@ public class Calc {
 		int c;
 		String[] splitedString = numbers.split(",");
 		int result = 0;
+		String numbersClean = null;
 
 		if (numbers == "") {
 			return 0;
@@ -15,7 +16,12 @@ public class Calc {
 			c = Integer.parseInt(splitedString[0]);
 			return c;
 		} else {
-			String[] splitedString2 = numbers.split(",");
+//			if (numbers.contains("\n")) {
+//				numbers.replace('\n', ',');
+//			}
+			String cleanNumbers = numbers.replace("\n",",");
+
+			String[] splitedString2 = cleanNumbers.split(",");
 			for (String number: splitedString2) {
 				int intNumber;
 				intNumber = Integer.valueOf(number);
