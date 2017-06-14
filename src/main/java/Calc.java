@@ -5,24 +5,19 @@ public class Calc {
 
 	public int add(String numbers) {
 
-		int c;
+		int tempIntFromString;
 		String[] splitedString = numbers.split(",");
 		int result = 0;
-		String numbersClean = null;
 
-		if (numbers == "") {
+		if (numbers.equals(null) || numbers.equals("")) {
 			return 0;
 		} else if (splitedString.length == 1) {
-			c = Integer.parseInt(splitedString[0]);
-			return c;
+			tempIntFromString = Integer.valueOf(splitedString[0]);
+			return tempIntFromString;
 		} else {
-//			if (numbers.contains("\n")) {
-//				numbers.replace('\n', ',');
-//			}
-			String cleanNumbers = numbers.replace("\n",",");
-
+			String cleanNumbers = numbers.replace("\n", ",");
 			String[] splitedString2 = cleanNumbers.split(",");
-			for (String number: splitedString2) {
+			for (String number : splitedString2) {
 				int intNumber;
 				intNumber = Integer.valueOf(number);
 				result += intNumber;
